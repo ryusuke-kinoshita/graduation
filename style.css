@@ -19,6 +19,8 @@ body{
     grid-row-gap: 20px;
     column-gap: 20px;
 }
+
+/* ここからヘッダー */
 header{
     color: #00213b;
     grid-row: head;
@@ -27,6 +29,8 @@ header{
     justify-self: start;
     /* z-index: 1; */
 }
+
+/* ここからナビゲーション */
 nav{
     align-self: end;
     grid-row: head;
@@ -53,9 +57,9 @@ nav a:hover{
     color: rgba(206,226, 223, .5);
     text-decoration: none;
 }
-figure > img{
-    grid-column: 1 / -1;
-}
+/* ナビゲーションここまで */
+
+/* ここから自画像と紹介文の装飾 */
 #main-container{
     background-color: #00213b;
     grid-row: main;
@@ -65,7 +69,14 @@ figure > img{
     width: 100%;
 }
 #main-container img{
-    z-index: -1;
+    /* z-index: -1; */
+    height: 100%;
+}
+/* 自画像と紹介文ここまで */
+
+/* ここからworksの装飾 */
+figure > img{
+    grid-column: 1 / -1;
 }
 #links{
     margin-top: 100px;
@@ -74,10 +85,11 @@ h2{
     text-align: center;
     padding-bottom: auto;
 }
+
 .works{
     display: grid;
     grid-row: sub;
-    grid-column: 3 / -3;
+    grid-column: 1 / -2;
     grid-template-columns: repeat(3, 1fr);
     list-style-type: none;
     justify-items: end;
@@ -86,12 +98,17 @@ h2{
     grid-column-gap: 5%;
     column-gap: 5%;
 }
+
+/* 画像の装飾 */
 .works li img{
     height: 300px;
     width: 300px;
     /* margin-right: 0; */
     /* margin-left: 0; */
 }
+/* ↑ここまでworks */
+
+/* フッター */
 footer{
     display: grid;
     grid-column: 4 / -4;
