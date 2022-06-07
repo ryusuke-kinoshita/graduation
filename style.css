@@ -9,7 +9,7 @@ body > *{
 body{
     background-color: #fff;
     display: grid;
-    font-family: "Lato" "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: "Dosis", sans-serif;
     grid-template-columns: .2fr repeat(6, 1fr) .2fr;
     grid-template-rows: 
             [head] 100px
@@ -50,11 +50,11 @@ nav ul{
     width: auto;
 }
 nav a{
-    color: #cee2df;
+    color: black;
     text-decoration: none;
 }
 nav a:hover{
-    color: rgba(206,226, 223, .5);
+    color: rgba(109, 150, 144, 0.5);
     text-decoration: none;
 }
 /* ナビゲーションここまで */
@@ -83,7 +83,7 @@ figure > img{
 }
 h2{
     font-size: 50px;
-    font-family: "Lato", "メイリオ, Meiryo, ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Arial, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: "Dosis", sans-serif;
     text-align: center;
     padding-bottom: auto;
 }
