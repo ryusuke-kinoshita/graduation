@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* * {
-    margin: 0;
-} */
 body > *{
     grid-column: 2 / -2;
 }
@@ -10,25 +7,20 @@ body{
     background-color: #fff;
     display: grid;
     font-family: "Dosis", sans-serif;
-    grid-template-columns: .2fr repeat(6, 1fr) .2fr;
+    font-size: 2em;
+    grid-auto-flow: column;
+    grid-template-columns: .4fr repeat(6, 2fr) .4fr;
     grid-template-rows: 
-            [head] 100px
-            [main] 500px
-            [sub] 100px
-            [foot] 100px;
-    grid-row-gap: 100px;
-    column-gap: 100px;
+            [head] auto
+            [main] auto
+            [sub] auto
+            [foot] 10%;
 }
 
 /* ここからヘッダー */
 header{
     color: #333;
     grid-row: head;
-    font-size: 280%;
-    margin-top: auto;
-    margin-right: auto;
-    justify-self: start;
-    /* z-index: 1; */
 }
 
 /* ここからナビゲーション */
@@ -36,8 +28,6 @@ nav{
     align-self: end;
     grid-row: head;
     justify-self: right;
-    margin-left: auto;
-    /* width: 50%; */
 }
 nav ul{
     display: grid;
@@ -45,11 +35,9 @@ nav ul{
     grid-auto-flow: column;
     grid-column-gap: 100px;
     list-style-type: none;
-    padding: 0;
-    text-align: right;
-    letter-spacing: 0.1em;
+    padding: auto;
+    letter-spacing: .1em;
     width: auto;
-    /* vertical-align: baseline; */
 }
 nav a{
     color: black;
@@ -63,14 +51,11 @@ nav a:hover{
 
 /* ここから自画像と紹介文の装飾 */
 #main-container{
-    display: grid;
-    background-color: #ecebeb;
     grid-row: main;
     grid-column: 1 / -1;
     
 }
 #main-container img{
-    /* z-index: -1; */
     height: 420px;
     width: 1520px;
     overflow: hidden;
@@ -85,18 +70,16 @@ nav a:hover{
 h2{
     font-size: 50px;
     font-family: "Dosis", sans-serif;
+    margin-top: 10%;
     text-align: center;
-    padding-bottom: 150px;
+    padding-bottom: 10%;
 }
 
 .works{
     display: grid;
     grid-row: main;
     grid-template-columns: repeat(3, 1fr);
-    list-style-type: none;
-    margin-right: auto;
-    margin-left: auto;
-    grid-row-gap: 15%;
+    row-gap: 5%;    
 }
 
 /* 画像の装飾 */
@@ -109,7 +92,7 @@ h2{
 /* ↑ここまでworks */
 
 /* トップに戻るボタン */
-.backtotop{
+.back{
     text-decoration: none;
 }
 
@@ -136,10 +119,14 @@ footer > *{
 }
 
 /* ここから2ページ目 */
-#introduce p{
+#introduce{
+    display: grid;
+    grid-row: main;
     font-family: 'Shippori Mincho', serif;
     font-size: 50px;
 }
+
+
 
 
 
