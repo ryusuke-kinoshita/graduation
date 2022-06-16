@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-html { font-size: 62.5%; /*pxだと10px;*/
+html{ font-size: 62.5%; /*pxだと10px;*/
+      
 }
 
 body > *{
@@ -59,8 +60,8 @@ nav a:hover{
     
 }
 #main-container img{
-    height: 420px;
-    width: 1520px;
+    height: 25rem;
+    width: 100%;
     overflow: hidden;
     object-fit: cover;
 }
