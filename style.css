@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-html{ font-size: 62.5%; /*pxだと10px;*/
-      
+html{ 
+    font-size: 62.5%; /*pxだと10px;*/
+    font-family: "Dosis", sans-serif;
 }
 
 body > *{
@@ -92,6 +93,13 @@ h2{
     width: 415px;
     margin-right: 0;
     margin-left: 0;
+}
+
+.works p{
+    font-family: 'Shippori Mincho', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 /* ↑ここまでworks */
 
