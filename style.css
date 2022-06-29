@@ -1,10 +1,9 @@
 @charset "utf-8";
 
 html{ 
-    font-size: 62.5%; /*pxだと10px;*/
+    font-size: 100px; 
     font-family: "Dosis", sans-serif;
 }
-
 body > *{
     grid-column: 2 / -2;
 }
@@ -12,20 +11,24 @@ body{
     background-color: #fff;
     display: grid;
     font-family: "Dosis", sans-serif;
-    font-size: 2rem;/*pxだと20px;*/
+    font-size: .20rem;/*pxだと20px;*/
     grid-auto-flow: column;
     grid-template-columns: .4fr repeat(6, 2fr) .4fr;
     grid-template-rows: 
             [head] auto
             [main] auto
             [sub] auto
-            [foot] 10%;
+            [foot] .1rem;
 }
 
 /* ここからヘッダー */
 header{
-    color: #333;
     grid-row: head;
+    height: 2rem;
+}
+header h1 img{
+    margin: .5rem auto;
+    vertical-align: bottom;
 }
 
 /* ここからナビゲーション */
@@ -36,16 +39,17 @@ nav{
 }
 nav ul{
     display: grid;
-    font-size: 2.4rem;/*pxだと25px;*/
+    font-size: .24rem;/*pxだと24px;*/
     grid-auto-flow: column;
-    grid-column-gap: 7.5rem;/*pxだと75px;*/
+    grid-column-gap: .75rem;/*pxだと75px;*/
+    margin: .25rem;
     list-style-type: none;
     padding: auto;
-    letter-spacing: .1rem;
+    letter-spacing: .01rem;
     width: auto;
 }
 nav a{
-    color: black;
+    color: #333;
     text-decoration: none;
 }
 nav a:hover{
@@ -58,49 +62,49 @@ nav a:hover{
 #main-container{
     grid-row: main;
     grid-column: 1 / -1;
-    
 }
-#main-container img{
-    height: auto;
+figure{
+    /* display: none; */
+}
+#images{
     width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+}
+#images1{
+    display: none;
 }
 /* 自画像と紹介文ここまで */
 
 /* ここからworksの装飾 */
 #links{
-    margin-top: 100px;
+    margin-top: 1rem;
 }
 h2{
-    font-size: 5.4rem;/*pxだと50px;*/
+    font-size: .54rem;/*pxだと50px;*/
     font-family: "Dosis", sans-serif;
-    margin-top: 10%;
+    letter-spacing: .08rem;
+    margin: 1rem auto;
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: .1rem;
 }
-
-.works{
+/* 画像の装飾 */
+.photos{ 
     display: grid;
     grid-row: main;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 5%;    
+    row-gap: .05rem;    
 }
-
-/* 画像の装飾 */
-.works li img{
-    height: 320px;
-    width: 415px;
-    margin-right: 0;
-    margin-left: 0;
+.photos li img{
+    height: 3.2rem;
+    width: 4.15rem;
+    margin: 0 auto;
 }
-
-.works p{
+.photos p{
     font-family: 'Shippori Mincho', serif;
-    font-size: 24px;
+    font-size: .24rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
-    margin-top: 1.5rem;
+    letter-spacing: .05rem;
+    margin-top: .15rem;
+    margin-right: .5rem;
     text-align: center;
 }
 /* ↑ここまでworks */
@@ -112,6 +116,9 @@ h2{
 
 /* フッター */
 footer{
+    display: grid;
+    grid-row: foot;
+    margin: 1rem;
     align-self: start;
     text-align: center;
 }
@@ -119,17 +126,19 @@ footer > *{
     list-style-type: none;
 }
 .sns{
-    /* justify-self: start; */
-    
+    display: flex;
 }
 .sns img{
-    height: 50px;
-    width: 50px;
+    grid-template-columns: 6 / -1;
+    height: .5rem;
+    padding: .1rem;
+    width: auto;
 }
 .copylight{
     text-align: center;
     vertical-align: baseline;
     list-style-type: none;
+    grid-template-columns: 6 / -1;
 }
 
 /* ここから2ページ目 */
@@ -137,5 +146,13 @@ footer > *{
     display: grid;
     grid-row: main;
     font-family: 'Shippori Mincho', serif;
-    font-size: 5.6rem;/*pxだと5.6px;*/
+    font-size: .24rem;/*pxだと40px;*/
+    margin-bottom: 1rem;
+}
+#introduce p{
+    padding: .2rem;
+}
+.name{
+    font-size: .42rem;
+    font-weight: bold;
 }
