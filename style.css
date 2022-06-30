@@ -21,7 +21,7 @@ body{
             [sub] auto
             [foot] .1rem;
 }
-
+/* 全ページ共通設定 */
 /* ここからヘッダー */
 header{
     grid-row: head;
@@ -58,6 +58,42 @@ nav a:hover{
     text-decoration: none;
 }
 /* ナビゲーションここまで */
+
+/* トップに戻るボタン */
+.back{
+    justify-self: center;
+}
+.back img{
+    margin: 1rem;
+}
+
+/* フッター */
+footer > *{
+    list-style-type: none;
+}
+footer{
+    display: grid;
+    grid-row: foot;
+    grid-column: 6 / -1;
+    margin: 1.8rem auto; 
+    align-self: start;
+    
+}
+.sns{
+    display: flex;
+    text-align: center;
+}
+.sns img{
+    height: .5rem;
+    padding: auto;
+    width: auto;
+    margin: .1rem;
+}
+.copylight{
+    vertical-align: middle;
+    list-style-type: none;
+}
+/* 全ページ共通設定ここまで */
 
 /* ここから自画像と紹介文の装飾 */
 #main-container{
@@ -108,38 +144,6 @@ figure{
 }
 /* ↑ここまでworks */
 
-/* トップに戻るボタン */
-.back{
-    margin-top: 1rem;
-    justify-self: center;
-}
-
-/* フッター */
-footer{
-    display: grid;
-    grid-row: foot;
-    grid-column: 6 / -1;
-    margin: 1rem;
-    align-self: start;
-    text-align: center;
-}
-footer > *{
-    list-style-type: none;
-}
-.sns{
-    display: flex;
-}
-.sns img{
-    height: .5rem;
-    padding: .1rem;
-    width: auto;
-    margin: .1rem;
-}
-.copylight{
-    text-align: center;
-    vertical-align: end;
-    list-style-type: none;
-}
 
 /* ここからブログページ */
 #blog{
@@ -167,7 +171,7 @@ time{
     letter-spacing: .02rem;
     text-align: left;
 }
-#trips img:nth-child(1){
+#trips img{
     width: 9.68rem;
     height: 8rem;
     text-align: center;
@@ -175,7 +179,7 @@ time{
     margin-bottom: .8rem;
 }
 
-#trips img:nth-child(n+2){
+/* #trips img:nth-child(n+2){
     width: 4rem;
     height: 3rem;
     margin-top: 1rem;
@@ -183,7 +187,7 @@ time{
     margin-bottom: .8rem;
     text-align: left;
 
-}
+} */
 
 
 /* ここからプロフィールページ */
