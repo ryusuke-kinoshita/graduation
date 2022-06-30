@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 基本設定 */
 html{ 
     font-size: 100px; 
     font-family: "Dosis", sans-serif;
@@ -11,7 +12,7 @@ body{
     background-color: #fff;
     display: grid;
     font-family: "Dosis", sans-serif;
-    font-size: .20rem;/*pxだと20px;*/
+    font-size: .2rem;/*pxだと20px;*/
     grid-auto-flow: column;
     grid-template-columns: .4fr repeat(6, 2fr) .4fr;
     grid-template-rows: 
@@ -65,11 +66,9 @@ nav a:hover{
 }
 figure{
     /* display: none; */
+    /* position: relative; */
 }
-#images{
-    width: 100%;
-}
-#images1{
+.image2{
     display: none;
 }
 /* 自画像と紹介文ここまで */
@@ -78,7 +77,7 @@ figure{
 #links{
     margin-top: 1rem;
 }
-h2{
+#index h2{
     font-size: .54rem;/*pxだと50px;*/
     font-family: "Dosis", sans-serif;
     letter-spacing: .08rem;
@@ -111,13 +110,15 @@ h2{
 
 /* トップに戻るボタン */
 .back{
-    text-decoration: none;
+    margin-top: 1rem;
+    justify-self: center;
 }
 
 /* フッター */
 footer{
     display: grid;
     grid-row: foot;
+    grid-column: 6 / -1;
     margin: 1rem;
     align-self: start;
     text-align: center;
@@ -129,19 +130,63 @@ footer > *{
     display: flex;
 }
 .sns img{
-    grid-template-columns: 6 / -1;
     height: .5rem;
     padding: .1rem;
     width: auto;
+    margin: .1rem;
 }
 .copylight{
     text-align: center;
-    vertical-align: baseline;
+    vertical-align: end;
     list-style-type: none;
-    grid-template-columns: 6 / -1;
 }
 
-/* ここから2ページ目 */
+/* ここからブログページ */
+#blog{
+    display: grid;
+}
+#blog > p{
+    font-size: .28rem;
+}
+time{
+    font-weight: bolder;
+}
+#trips{
+    grid-row: main;
+    grid-column: 3 / -2;
+}
+#trips h2{
+    font-size: .68rem;
+    justify-self: start;
+    letter-spacing: .16rem;
+    margin: .68rem;
+}
+#trips h3{
+    font-family: 'Shippori Mincho', serif;
+    font-size: .36rem;
+    letter-spacing: .02rem;
+    text-align: left;
+}
+#trips img:nth-child(1){
+    width: 9.68rem;
+    height: 8rem;
+    text-align: center;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+
+#trips img:nth-child(n+2){
+    width: 4rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: .8rem;
+    text-align: left;
+
+}
+
+
+/* ここからプロフィールページ */
 #introduce{
     display: grid;
     grid-row: main;
