@@ -95,7 +95,8 @@ footer{
 }
 /* 全ページ共通設定ここまで */
 
-/* ここから自画像と紹介文の装飾 */
+/* ここからindexページ */
+/* 自画像と紹介文の装飾 */
 #main-container{
     grid-row: main;
     grid-column: 1 / -1;
@@ -143,7 +144,7 @@ figure{
     text-align: center;
 }
 /* ↑ここまでworks */
-
+/* indexページここまで */
 
 /* ここからブログページ */
 #blog{
@@ -188,7 +189,10 @@ time{
     text-align: left;
 
 } */
-
+/* ここから個別のtripページ */
+#trip1, #trip2, #trip3{
+    
+}
 
 /* ここからプロフィールページ */
 #introduce{
