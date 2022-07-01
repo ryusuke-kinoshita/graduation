@@ -190,8 +190,19 @@ time{
 
 } */
 /* ここから個別のtripページ */
-#trip1, #trip2, #trip3{
-    
+#trip1, #trip2, #trip3 img:nth-child(2){
+    width: 9.68rem;
+    height: 8rem;
+    text-align: center;
+}
+#trips, #trip2, #trip3 img:nth-child(n+3){
+    width: 4rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: .8rem;
+    text-align: left;
+
 }
 
 /* ここからプロフィールページ */
