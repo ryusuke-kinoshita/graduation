@@ -8,7 +8,7 @@ html{
 body > *{
     grid-column: 2 / -2;
 }
-body{
+body, #index, #blog, #profile, #contact{
     background-color: #fff;
     display: grid;
     font-family: "Dosis", sans-serif;
@@ -58,53 +58,19 @@ nav a:hover{
     text-decoration: none;
 }
 /* ナビゲーションここまで */
-
-/* トップに戻るボタン */
-.back{
-    justify-self: center;
-}
-.back img{
-    margin: 1rem;
-}
-
-/* フッター */
-footer > *{
-    list-style-type: none;
-}
-footer{
-    display: grid;
-    grid-row: foot;
-    grid-column: 6 / -1;
-    margin: 1.8rem auto; 
-    align-self: start;
-    
-}
-.sns{
-    display: flex;
-    text-align: center;
-}
-.sns img{
-    height: .5rem;
-    padding: auto;
-    width: auto;
-    margin: .1rem;
-}
-.copylight{
-    vertical-align: middle;
-    list-style-type: none;
-}
-/* 全ページ共通設定ここまで */
+/* 共通ヘッダー設定ここまで */
 
 /* ここからindexページ */
 /* 自画像と紹介文の装飾 */
 #main-container{
     grid-row: main;
     grid-column: 1 / -1;
+    background-image: url(images/hero/sevenstar.jpg);
+    background-repeat: none;
+    height: 100vh;
+    width: auto;
 }
-figure{
-    /* display: none; */
-    /* position: relative; */
-}
+
 .image2{
     display: none;
 }
@@ -115,7 +81,7 @@ figure{
     margin-top: 1rem;
 }
 #index h2{
-    font-size: .54rem;/*pxだと50px;*/
+    font-size: .50rem;/*pxだと50px;*/
     font-family: "Dosis", sans-serif;
     letter-spacing: .08rem;
     margin: 1rem auto;
@@ -135,8 +101,9 @@ figure{
     margin: 0 auto;
 }
 .photos p{
-    font-family: 'Shippori Mincho', serif;
-    font-size: .24rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bolder;
+    font-size: .31rem;
     font-weight: bold;
     letter-spacing: .05rem;
     margin-top: .15rem;
@@ -161,55 +128,45 @@ time{
     grid-column: 3 / -2;
 }
 #trips h2{
-    font-size: .68rem;
+    font-size: .618rem;
     justify-self: start;
     letter-spacing: .16rem;
-    margin: .68rem;
+    margin: .618rem;
 }
 #trips h3{
-    font-family: 'Shippori Mincho', serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: .36rem;
     letter-spacing: .02rem;
     text-align: left;
 }
 #trips img{
-    width: 9.68rem;
+    width: 8.618rem;
     height: 8rem;
     text-align: center;
     margin-top: .8rem;
     margin-bottom: .8rem;
 }
 
-/* #trips img:nth-child(n+2){
-    width: 4rem;
-    height: 3rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-bottom: .8rem;
-    text-align: left;
-
-} */
 /* ここから個別のtripページ */
-#trip1, #trip2, #trip3 img:nth-child(2){
-    width: 9.68rem;
-    height: 8rem;
+#trip img:first-of-type, #trip2 img:first-of-type{
+    width: 6rem;
+    height: 9.7rem;
     text-align: center;
 }
-#trips, #trip2, #trip3 img:nth-child(n+3){
-    width: 4rem;
-    height: 3rem;
+#trip img:nth-of-type(n+2), #trip2 img:nth-of-type(n+2){
+    width: 6.4rem;
+    height: 4rem;
     margin-top: 1rem;
     margin-right: 1rem;
     margin-bottom: .8rem;
     text-align: left;
-
 }
 
 /* ここからプロフィールページ */
 #introduce{
     display: grid;
     grid-row: main;
-    font-family: 'Shippori Mincho', serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: .24rem;/*pxだと40px;*/
     margin-bottom: 1rem;
 }
@@ -219,4 +176,41 @@ time{
 .name{
     font-size: .42rem;
     font-weight: bold;
+}
+
+
+/* トップに戻るボタン */
+.back{
+    justify-self: center;
+}
+.back img{
+    margin: 1rem;
+}
+
+/* フッター */
+footer > *{
+    list-style-type: none;
+}
+footer{
+    display: grid;
+    grid-row: foot;
+    grid-column: 6 / -1;
+    margin: 1.8rem auto; 
+    align-self: start;
+}
+.sns{
+    display: flex;
+    text-align: center;
+}
+.sns img{
+    height: .5rem;
+    padding: auto;
+    width: auto;
+    margin: .1rem;
+}
+.copylight{
+    vertical-align: middle;
+    list-style-type: none;
+    font-weight: bold;
+    font-style: 16rem;
 }
