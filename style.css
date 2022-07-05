@@ -200,14 +200,13 @@ footer{
 .sns{
     display: flex;
     text-align: center;
+    justify-content:space-between;
+    justify-content:space-around;
 }
 .sns img{
-    height: .5rem;
-    justify-self: flex-start;
-    padding: 0;
+    height: .36rem;
     width: auto;
-    margin-left: 0;
-    margin: auto;
+    margin-bottom: .4rem;
 }
 .copylight{
     vertical-align: middle;
