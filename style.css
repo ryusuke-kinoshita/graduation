@@ -68,8 +68,15 @@ nav a:hover{
     background-image: url(images/hero/sevenstar.jpg);
     background-repeat: none;
     height: 100vh;
-    width: auto;
+    width: 100%;
 }
+#index header{
+    display: none;
+}
+#index nav{
+    position: relative;
+
+} 
 .image2{
     display: none;
 }
