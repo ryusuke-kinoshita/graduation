@@ -61,6 +61,35 @@ nav a:hover{
     text-decoration: none;
 }
 /* ナビゲーションここまで */
+
+footer > *{
+    list-style-type: none;
+}
+footer{
+    display: grid;
+    grid-row: foot;
+    grid-column: 6 / -1;
+    margin: 1.8rem auto; 
+    align-self: start;
+}
+.sns{
+    display: flex;
+    text-align: center;
+}
+.sns img{
+    height: .5rem;
+    justify-self: flex-start;
+    padding: 0;
+    width: auto;
+    margin-left: 0;
+    margin: auto;
+}
+.copylight{
+    vertical-align: middle;
+    list-style-type: none;
+    font-weight: bold;
+    font-style: 16rem;
+}
 /* 共通ヘッダー設定ここまで */
 
 /* ここからindexページ */
@@ -97,17 +126,21 @@ nav a:hover{
 }
 /* 自画像と紹介文ここまで */
 
-/* ここからworksの装飾 */
+/* ここからPhotosの装飾 */
 #links{
     margin-top: 1rem;
 }
-#index h2{
-    font-size: .50rem;/*pxだと50px;*/
+#links h2{
+    font-size: .46rem;/*pxだと50px;*/
     font-family: "Dosis", sans-serif;
+    font-weight: bold;
     letter-spacing: .08rem;
-    margin: 1rem auto;
+    margin: 1rem auto .6rem;
     text-align: center;
     padding-bottom: .1rem;
+}
+#links p{
+    text-align: center;
 }
 /* 画像の装飾 */
 .photos{ 
@@ -145,19 +178,21 @@ nav a:hover{
 }
 #trips{
     grid-row: main;
-    grid-column: 3 / -1;
+    grid-column: 2 / -2;
+}
+#trips img{
+    float: left;
+    width: 4rem;
+    height: 4.2rem;
+    justify-self: center;
+    margin: .4rem auto .8rem;
 }
 #trips h3{
+    clear: both;
     font-family: 'Klee One', cursive;
     font-size: .36rem;
     letter-spacing: .02rem;
     text-align: left;
-}
-#trips img{
-    width: 8rem;
-    height: 5rem;
-    justify-self: center;
-    margin: 2rem auto .8rem; 
 }
 
 /* ここから個別のtripページ */
