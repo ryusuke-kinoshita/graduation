@@ -31,6 +31,13 @@ header h1 img{
     margin: .5rem auto;
     vertical-align: bottom;
 }
+#main-container nav{
+    grid-row: head;
+    color: white;
+    height: 2rem;
+    align-self: end;
+    justify-self: right;
+}
 
 /* ここからナビゲーション */
 nav{
@@ -40,18 +47,14 @@ nav{
 }
 nav ul{
     display: grid;
-    font-size: .24rem;/*pxだと24px;*/
+    font-size: .24rem;
     grid-auto-flow: column;
-    grid-column-gap: .75rem;/*pxだと75px;*/
+    grid-column-gap: .75rem;
     margin: .32rem;
     list-style-type: none;
     padding: auto;
     letter-spacing: .01rem;
     width: auto;
-}
-nav a{
-    color: #333;
-    text-decoration: none;
 }
 nav a:hover{
     color: rgba(109, 150, 144, 0.5);
@@ -62,21 +65,33 @@ nav a:hover{
 
 /* ここからindexページ */
 /* 自画像と紹介文の装飾 */
-#main-container{
-    grid-row: main;
-    grid-column: 1 / -1;
-    background-image: url(images/hero/sevenstar.jpg);
-    background-repeat: none;
-    height: 100vh;
-    width: 100%;
-}
 #index header{
     display: none;
 }
 #index nav{
-    position: relative;
-
-} 
+    display: grid;
+    align-self: start;
+}
+#index nav ul{
+    grid-row: head;
+    font-size: .24rem;/*pxだと24px;*/
+    grid-auto-flow: column;
+    grid-column-gap: .75rem;/*pxだと75px;*/
+    margin: .32rem;
+    list-style-type: none;
+    padding: auto;
+    letter-spacing: .01rem;
+    width: auto;
+    color: #fff;
+}
+#main-container{
+    grid-row: head;
+    grid-column: 1 / -1;
+    background: url(images/hero/sevenstar.jpg) center / cover no-repeat;
+    /* background-repeat: none; */
+    min-height: 100vh;
+    width: 100%;
+}
 .image2{
     display: none;
 }
@@ -105,24 +120,22 @@ nav a:hover{
 .photos li img{
     height: 3.2rem;
     width: 4.15rem;
-    margin: .618rem auto;
+    margin: .6rem auto .8rem;
 }
 .photos p{
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: bolder;
-    font-size: .31rem;
+    font-family: 'Klee One', cursive;
+    font-size: .28rem;
     font-weight: bold;
-    letter-spacing: .05rem;
+    letter-spacing: .08rem;
     text-align: center;
 }
-/* ↑ここまでworks */
 /* indexページここまで */
 
 /* ここからプロフィールページ */
 #pro > p{
+    font-family: 'Klee One', cursive;
     font-size: .24rem;
 }
-
 #pro .back{
     margin: 0;
 }
@@ -130,20 +143,12 @@ nav a:hover{
 #blog{
     display: grid;
 }
-#blog > p{
-    font-size: .28rem;
-}
 #trips{
     grid-row: main;
     grid-column: 3 / -1;
 }
-#trips h2{
-    font-size: .618rem;
-    justify-self: start;
-    letter-spacing: .16rem;
-}
 #trips h3{
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Klee One', cursive;
     font-size: .36rem;
     letter-spacing: .02rem;
     text-align: left;
@@ -156,12 +161,16 @@ nav a:hover{
 }
 
 /* ここから個別のtripページ */
-#trip img:first-of-type, #trip2 img:first-of-type{
-    width: 6rem;
-    height: 9.7rem;
+.trip{
+    display: grid;
+}
+.trip img:first-of-type{
+    grid-row: main;
+    width: 7.5rem;
+    height: 8rem;
     text-align: center;
 }
-#trip img:nth-of-type(n+2), #trip2 img:nth-of-type(n+2){
+.trip img:nth-of-type(n+2){
     width: 6.5rem;
     height: 4rem;
     margin: 1rem 1rem .8rem;
@@ -184,9 +193,9 @@ nav a:hover{
     font-weight: bold;
 }
 
-
 /* トップに戻るボタン */
 .back{
+    clear: both;
     justify-self: center;
     margin: 0 ;
 }
@@ -207,13 +216,14 @@ footer{
 .sns{
     display: flex;
     text-align: center;
-    justify-content:space-between;
-    justify-content:space-around;
 }
 .sns img{
-    height: .36rem;
+    height: .5rem;
+    justify-self: flex-start;
+    padding: 0;
     width: auto;
-    margin-bottom: .4rem;
+    margin-left: 0;
+    margin: auto;
 }
 .copylight{
     vertical-align: middle;
