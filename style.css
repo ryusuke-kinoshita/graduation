@@ -8,7 +8,7 @@ html{
 body > *{
     grid-column: 2 / -2;
 }
-body, #index, #blog, #profile, #contact{
+body, #index, #blog, #profile, #contact,#trip1,#trip2,#trip3{
     background-color: #fff;
     display: grid;
     font-family: "Dosis", "M PLUS Rounded 1c", sans-serif;
@@ -45,8 +45,13 @@ nav{
     grid-row: head;
     justify-self: right;
 }
+#blog nav, #pro nav, #contact nav,#trip1 nav,#trip2 nav,#trip3 nav{
+    align-self: start;
+}
 nav ul{
-    display: grid;
+    display: flex;
+    text-align: center;
+    /* display: grid; */
     font-size: .24rem;
     grid-auto-flow: column;
     grid-column-gap: .75rem;
@@ -213,15 +218,22 @@ footer{
 }
 
 /* ここからプロフィールページ */
+#pro{
+}
 #introduce{
     display: grid;
-    grid-row: main;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: .24rem;/*pxだと40px;*/
-    margin-bottom: 1rem;
 }
-#introduce p{
-    padding: .2rem;
+#introduce h3{
+    font-size: .36rem;
+    vertical-align: top;
+    text-align: center;
+}
+.self, .about{
+    grid-row: main;
+    border: solid .05rem black;
+    margin: .1rem .05rem;
+    padding: auto;
 }
 .name{
     font-size: .42rem;
