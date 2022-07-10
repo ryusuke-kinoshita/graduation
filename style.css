@@ -3,7 +3,9 @@
 /* 基本設定 */
 html{ 
     font-size: 100px; 
-    font-family: "Dosis", sans-serif;
+    font-family: "Dosis", "M PLUS Rounded 1c", sans-serif;
+    margin: auto;
+    padding: auto;
 }
 body > *{
     grid-column: 2 / -2;
@@ -11,8 +13,7 @@ body > *{
 body, #index, #blog, #profile, #contact,#trip1,#trip2,#trip3{
     background-color: #fff;
     display: grid;
-    font-family: "Dosis", "M PLUS Rounded 1c", sans-serif;
-    font-size: .2rem;/*pxだと20px;*/
+    font-size: .2rem; /* pxだと20px */
     grid-auto-flow: column;
     grid-template-columns: .4fr repeat(6, 2fr) .4fr;
     grid-template-rows: 
@@ -38,56 +39,65 @@ header h1 img{
     align-self: end;
     justify-self: right;
 }
-
 /* ここからナビゲーション */
 nav{
     align-self: end;
     grid-row: head;
     justify-self: right;
 }
+#index nav{
+    display: grid;
+    align-self: start;
+    color: #fff;
+}
 #blog nav, #pro nav, #contact nav,#trip1 nav,#trip2 nav,#trip3 nav{
     align-self: start;
 }
 nav ul{
-    display: flex;
+    grid-template-columns: auto auto auto;
     text-align: center;
-    /* display: grid; */
+    display: grid;
     font-size: .24rem;
     grid-auto-flow: column;
     grid-column-gap: .75rem;
     margin: .32rem;
     list-style-type: none;
-    padding: auto;
     letter-spacing: .01rem;
     width: auto;
 }
 nav a:hover{
     color: rgba(109, 150, 144, 0.5);
-    text-decoration: none;
 }
 /* ナビゲーションここまで */
-
+/* ここからフッター */
+/* トップに戻るボタン */
+.back{
+    grid-row: foot;
+    clear: both;
+    justify-self: center;
+    margin: 0 ;
+}
 footer > *{
     list-style-type: none;
 }
 footer{
-    display: grid;
     grid-row: foot;
     grid-column: 6 / -1;
     margin: 1.8rem auto; 
     align-self: start;
 }
 .sns{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     text-align: center;
+    margin-bottom: .2rem;
 }
 .sns img{
-    height: .5rem;
+    height: .3rem;
     justify-self: flex-start;
     padding: 0;
     width: auto;
-    margin-left: 0;
-    margin: auto;
+    /* margin:  0 auto; */
 }
 .copylight{
     vertical-align: middle;
@@ -102,22 +112,6 @@ footer{
 #index header{
     display: none;
 }
-#index nav{
-    display: grid;
-    align-self: start;
-}
-#index nav ul{
-    grid-row: head;
-    font-size: .24rem;/*pxだと24px;*/
-    grid-auto-flow: column;
-    grid-column-gap: .75rem;/*pxだと75px;*/
-    margin: .32rem;
-    list-style-type: none;
-    padding: auto;
-    letter-spacing: .01rem;
-    width: auto;
-    color: #fff;
-}
 #main-container{
     grid-row: head;
     grid-column: 1 / -1;
@@ -126,46 +120,16 @@ footer{
     min-height: 100vh;
     width: 100%;
 }
-.image2{
-    display: none;
-}
-/* 自画像と紹介文ここまで */
-
-/* ここからPhotosの装飾 */
-#links{
-    margin-top: 1rem;
-}
-#links h2{
-    font-size: .46rem;/*pxだと50px;*/
-    font-family: "Dosis", sans-serif;
-    font-weight: bold;
-    letter-spacing: .08rem;
-    margin: 1rem auto .6rem;
+#begin{
+    font-size: .22rem;
+    font-family: 'Klee One', cursive;   
+    line-height: .5rem;
     text-align: center;
-    padding-bottom: .1rem;
+    margin: .8rem auto; 
 }
-#links p{
-    text-align: center;
-}
-/* 画像の装飾 */
-.photos{ 
-    display: grid;
-    grid-row: main;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: .05rem;
-    margin-bottom: .6rem;    
-}
-.photos li img{
-    height: 3.2rem;
-    width: 4.15rem;
-    margin: .6rem auto .8rem;
-}
-.photos p{
-    font-family: 'Klee One', cursive;
+#begin h2{
     font-size: .28rem;
-    font-weight: bold;
-    letter-spacing: .08rem;
-    text-align: center;
+    font-style: italic;
 }
 /* indexページここまで */
 
@@ -174,52 +138,58 @@ footer{
     font-family: 'Klee One', cursive;
     font-size: .24rem;
 }
-#pro .back{
-    margin: 0;
+span.star{
+    color: rgb(120, 120, 25);
+}
+#introduce{
+    margin-bottom: 0.8rem;
 }
 /* ここからブログページ */
-#blog{
-    display: grid;
-}
 #trips{
     grid-row: main;
     grid-column: 2 / -2;
 }
-#trips img{
-    float: left;
+.photos{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: .05rem;
+    margin: 0 auto .6rem;    
+}
+.photos li img{
     width: 4rem;
     height: 4.2rem;
-    justify-self: center;
-    margin: .4rem auto .8rem;
+    margin: .6rem auto .8rem;
 }
-#trips h3{
-    clear: both;
+.photos h3{
     font-family: 'Klee One', cursive;
-    font-size: .36rem;
-    letter-spacing: .02rem;
+    font-size: .24rem;
+    /* font-weight: bold; */
+    letter-spacing: .06rem;
     text-align: left;
 }
-
 /* ここから個別のtripページ */
 .trip{
     display: grid;
+    grid-row: main;
+    margin: .8rem auto 1rem;
+}
+.trip h2{
+    font-size: .3rem;
 }
 .trip img:first-of-type{
-    grid-row: main;
-    width: 7.5rem;
-    height: 8rem;
-    text-align: center;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    margin: .8rem auto 1rem;
 }
 .trip img:nth-of-type(n+2){
-    width: 6.5rem;
-    height: 4rem;
-    margin: 1rem 1rem .8rem;
-    text-align: left;
+    /* display: grid; */
+    grid-template-columns: auto auto auto;
+    width: 3rem;
+    height: 3.6rem;
+    margin: .8rem auto 1rem;
 }
-
 /* ここからプロフィールページ */
-#pro{
-}
 #introduce{
     display: grid;
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -239,42 +209,17 @@ footer{
     font-size: .42rem;
     font-weight: bold;
 }
+/* プロフィールここまで */
 
-/* トップに戻るボタン */
-.back{
-    clear: both;
-    justify-self: center;
-    margin: 0 ;
+/* コンタクトここから */
+#ct{
+    grid-row: main;
+    grid-column:  2 / -2;
 }
-.back img{
+#ct p{
+    font-size: .16rem;
 }
-
-/* フッター */
-footer > *{
-    list-style-type: none;
-}
-footer{
-    display: grid;
-    grid-row: foot;
-    grid-column: 6 / -1;
-    margin: 1.8rem auto; 
-    align-self: start;
-}
-.sns{
-    display: flex;
-    text-align: center;
-}
-.sns img{
-    height: .5rem;
-    justify-self: flex-start;
-    padding: 0;
-    width: auto;
-    margin-left: 0;
-    margin: auto;
-}
-.copylight{
-    vertical-align: middle;
-    list-style-type: none;
-    font-weight: bold;
-    font-style: 16rem;
+#ct input{
+    border: solid .01rem black;
+    background-color: pink;
 }
