@@ -10,7 +10,7 @@ html{
 body > *{
     grid-column: 2 / -2;
 }
-body, #index, #blog, #profile, #contact,#trip1,#trip2,#trip3{
+body, #index, #blog, #pro, #contact,#trip1,#trip2,#trip3{
     background-color: #fff;
     display: grid;
     font-size: .2rem; /* pxだと20px */
@@ -141,8 +141,9 @@ footer{
     font-family: 'Klee One', cursive;
     font-size: .24rem;
 }
-span.star{
-    color: rgb(120, 120, 25);
+.shikaku{
+    font-size: .28rem;
+    padding: .4rem;
 }
 #introduce{
     margin-bottom: 0.8rem;
@@ -222,7 +223,7 @@ span.star{
 #ct p{
     font-size: .16rem;
 }
-#ct input{
+#ct label{
     border: solid .01rem black;
     background-color: pink;
 }
