@@ -5,12 +5,11 @@ html{
     font-family: "Dosis", "M PLUS Rounded 1c", sans-serif;
     font-size: 100px; 
     margin: auto;
-    padding: auto;
 }
 body > *{
     grid-column: 2 / -2;
 }
-body, #index, #blog, #pro, #contact,#trip1,#trip2,#trip3{
+#index, #blog, #pro, #contact,#trip1,#trip2,#trip3{
     background-color: #fff;
     display: grid;
     font-size: .2rem; /* pxだと20px */
@@ -70,12 +69,6 @@ nav a:hover{
 }
 /* ナビゲーションここまで */
 /* ここからフッター */
-/* トップに戻るボタン */
-.back{
-    grid-row: foot;
-    justify-self: center;
-    margin: 0 ;
-}
 footer > *{
     list-style-type: none;
 }
@@ -96,16 +89,15 @@ footer{
     justify-self: flex-start;
     padding: 0;
     width: auto;
-    /* margin:  0 auto; */
 }
-.copylight{
-    font-weight: bold;
-    font-style: 16rem;
+#copylight{
+    font-size: .22rem;
     list-style-type: none;
+    padding-bottom: .15rem;
     vertical-align: middle;
+    
 }
 /* 共通ヘッダー設定ここまで */
-
 /* ここからindexページ */
 /* 自画像と紹介文の装飾 */
 #index header{
@@ -184,11 +176,12 @@ footer{
     width: 7rem;
 }
 .trip img:nth-of-type(n+2){
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     height: 3rem; 
     margin: .8rem auto 1rem;
     width: 3.5rem;
 }
+/* 個別のtripページここまで */
 /* ここからプロフィールページ */
 #introduce{
     display: grid;
@@ -203,23 +196,64 @@ footer{
     border: solid .05rem black;
     grid-row: main;
     margin: .1rem .05rem;
-    padding: auto;
+}
+.self{
+    text-align: center;
 }
 .name{
     font-size: .42rem;
     font-weight: bold;
 }
 /* プロフィールここまで */
-
 /* コンタクトここから */
 #ct{
-    grid-column:  2 / -2;
+    grid-column:  3 / -2;
     grid-row: main;
+    margin-bottom: .1rem;
+}
+#ct article{
+    margin-bottom: .3rem;
+    padding: .06rem;
+}
+#ct h2{
+    font-size: .2rem;
+    padding-bottom: .06rem;
 }
 #ct p{
     font-size: .16rem;
 }
-#ct label {
-    background-color: pink;
-    border: solid .01rem black;
+form{
+    padding: .3rem;
+    padding-left: 0;
+}
+form p{
+    padding-bottom: .4rem;
+}
+.required{
+    background-color: #f45555;
+    color: #FFFFFF;
+    font-size: .12rem;
+    margin-left: .2rem;
+    padding: .01rem .03rem .01rem;
+}
+input[type="text"],
+input[type="email"]{
+    border: solid .01rem #545454;
+    height: .3rem;
+    margin:  .06rem auto;
+    width: 6rem;
+}
+textarea{
+    border: solid .01rem #545454;
+    height: 1rem;
+    width: 6rem;
+}
+input[type="submit"]{
+    background-color: #545454;
+    color: white;
+    font-size: .2rem;
+    height: .6rem;
+    padding: .08rem;
+    text-align: center;
+    width: 2rem;
 }

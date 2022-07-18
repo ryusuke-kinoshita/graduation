@@ -9,6 +9,7 @@
     <link rel="icon" href="images/hero/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="js/dist/css/lightbox.min.css">
     <link rel="stylesheet" href="destyle.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,21 +27,15 @@
     </nav>
     <div id="ct">
         <article>
-            <h1>お問い合わせ</h1>
-            <ul>
-                <li>ここまでご覧になった上で私に興味がある方は<br>
-                    下記のコンタクトフォームから問い合わせをお願いいたします。
-                </li>
-            </ul>
-            <form action="#">
-                <p><label>お名前<br><input type="text" name="name" required></label></p>
-                <p><label>メールアドレス<br><input type="email" name="mail" required></label></p>
-                <p>お問い合わせ種類<br>
-                <label><input type="radio" name="kind" value="0"></label>
-                <label><input type="radio" name="kind" value="1"> その他</p></label>
-                <p><label>お問い合わせ内容<br><textarea name="message"></textarea></label></p>
-                <p><input type="submit" value="確認する"></p>
-            </form>
+            <h2>お問い合わせ</h2>
+            <p>ここまでご覧になった上で私に興味がある方は<br>
+                下記のコンタクトフォームから問い合わせをお願いいたします。</p>
+                <form action="#">
+                    <p><span class="label">お名前<span class="required">必須</span></span><br><input type="text" name="name" placeholder="例）山田太郎" required ></label></p>
+                    <p><span class="label">メールアドレス<span class="required">必須</span></span><br><input type="email" name="mail" required placeholder="例） abcde1234@xxx.ne.jp"></label></p>
+                    <p><span class="label">お問い合わせ内容<span class="required">必須</span></span><br><textarea name="message"></textarea></label></p>
+                    <p><input type="submit" value="内容を送信する" class="submit"></p>
+                </form>
         </article>
     </div>
     <footer>
